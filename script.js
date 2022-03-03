@@ -17,12 +17,19 @@ $(".row").on("click", ".saveBtn", function () {
 
 var textArea = document.querySelector(".description")
 var saveBtn = document.querySelector(".saveBtn")
+
+
 var inputValue = textArea.value
 
-textArea.value = JSON.parse(localStorage.getItem("inputValue"))
-saveBtn.addEventListener("click", function (event) {
-  event.preventDefault()
-  localStorage.setItem("inputValue", JSON.stringify(textArea.value));
-  renderMessage()
-})
-
+//function textArea() {
+  // var textContent = {
+    //    textArea: textArea.value
+    // };
+    // localStorage.setItem("textContent", JSON.stringify(textContent));
+    //}
+    saveBtn.addEventListener('click', function(event) {
+      event.preventDefault()
+      localStorage.setItem('hello', 'JSON.stringify(textArea.value');
+    })
+    
+    textArea.value = JSON.parse(localStorage.getItem("inputValue"))
